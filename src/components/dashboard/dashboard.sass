@@ -1,0 +1,242 @@
+@import '../../App'
+
+
+.modal-open
+    overflow: hidden
+
+.dashboard-container
+    .dashboard
+        margin: 90px auto
+        padding: 0 16px
+        max-width: 1200px
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 30px
+            
+        .todo
+            box-shadow: 1px 1px 6px 0 #c5c5c5
+            padding: 8px
+            cursor: pointer
+            overflow-x: hidden
+
+            .todo-title
+                font-weight: bold
+                font-size: 18px
+                text-overflow: ellipsis
+                overflow: hidden
+                white-space: nowrap
+
+            .todo-description
+                margin-top: 10px
+                text-overflow: ellipsis
+                overflow: hidden
+                white-space: nowrap
+
+            .created-at
+                font-size: 13px
+                font-style: italic
+                margin-top: 10px
+                font-weight: 300
+
+    .dashboard-add-button
+        width: 100%
+        position: fixed
+        bottom: 0
+        padding: 12px 0
+        background-color: $primary-color
+        font-size: 22px
+        color: white
+        outline: none
+        border: none
+        cursor: pointer
+        transition: 0.3s
+
+        &:hover 
+            background-color: $hover-color
+
+.dashboard-modal
+    background-color: white
+    position: fixed
+    z-index: 10
+    left: 1%
+    right: 1%
+    bottom: 1%
+    top: 1%
+    max-width: 280px
+    max-height: 320px
+    margin: auto
+    border: none
+    box-shadow: 1px 1px 6px 0 #c5c5c5
+    overflow: auto
+    padding: 20px
+
+    .modal-label:first-child
+        margin: 0
+
+    .modal-label
+        font-weight: bold
+        font-size: 18px
+        margin-top: 10px
+        display: block
+
+    .modal-input
+        width: 100%
+        border: 1px solid black
+        padding: 10px
+        outline: none
+
+        &:focus
+            color: $primary-color
+            border-color: $primary-color
+
+    .modal-textarea
+        width: 100%
+        border: 1px solid black
+        padding: 10px
+        outline: none
+        resize: none
+        height: 90px
+
+        &:focus
+            color: $primary-color
+            border-color: $primary-color
+
+    .modal-update-button
+        width: 100%
+        margin-top: 10px
+        font-size: 20px
+        background-color: $primary-color
+        border-radius: 0px
+        border: none
+        outline: none
+        cursor: pointer
+        padding: 10px 0
+        color: white
+        transition: 0.3s
+
+        &:hover
+            background-color: $hover-color
+
+    .colors
+        display: grid
+        grid-template-columns: 25px 25px 25px 25px 25px 25px
+        justify-content: space-between
+        margin-top: 15px
+
+        .color-green
+            width: 25px
+            height: 25px
+            background-color: #81C784
+            cursor: pointer
+
+        .color-yellow
+            background-color: #FFF176
+            width: 25px
+            height: 25px
+            cursor: pointer
+
+        .color-blue
+            background-color: #4FC3F7
+            width: 25px
+            height: 25px
+            cursor: pointer
+
+        .color-purple
+            background-color: #BA68C8
+            width: 25px
+            height: 25px
+            cursor: pointer
+
+        .color-red
+            background-color: #EF5350
+            width: 25px
+            height: 25px
+            cursor: pointer
+
+        .color-white
+            background-color: white
+            border: 1px solid black
+            width: 25px
+            height: 25px
+            cursor: pointer
+
+    .trash
+        position: absolute
+        top: 0
+        right: 0
+        width: 18px
+        height: 18px
+        margin: 10px 10px 0 0
+        opacity: 0.5
+        cursor: pointer
+
+.add-modal
+    background-color: white
+    position: fixed
+    z-index: 10
+    left: 1%
+    right: 1%
+    bottom: 1%
+    top: 1%
+    max-width: 280px
+    max-height: 320px
+    margin: auto
+    border: none
+    box-shadow: 1px 1px 6px 0 #c5c5c5
+    overflow: auto
+    padding: 20px
+
+    .add-modal-label:first-child
+        margin: 0
+
+    .add-modal-label
+        font-weight: bold
+        font-size: 18px
+        margin-top: 10px
+        display: block
+
+    .add-modal-input
+        width: 100%
+        border: 1px solid black
+        padding: 10px
+        outline: none
+
+        &:focus
+            color: $primary-color
+            border-color: $primary-color
+
+    .add-modal-textarea
+        width: 100%
+        border: 1px solid black
+        padding: 10px
+        outline: none
+        resize: none
+        height: 130px
+
+        &:focus
+            color: $primary-color
+            border-color: $primary-color
+
+    .add-modal-update-button
+        width: 100%
+        margin-top: 10px
+        font-size: 20px
+        background-color: $primary-color
+        border-radius: 0px
+        border: none
+        outline: none
+        cursor: pointer
+        padding: 10px 0
+        color: white
+        transition: 0.3s
+
+        &:hover
+            background-color: $hover-color
+
+@media only screen and (min-width: 768px)
+    .dashboard-container
+        .dashboard
+            display: grid
+            grid-template-columns: 1fr 1fr 1fr
+            gap: 30px
+

@@ -1,26 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import "./App.sass";
+import { connect } from "react-redux";
+import { getProfile } from "./redux/actions/actions";
+import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
+import { PrivateRoute } from "./PrivateRoute";
+import Navbar from "./components/navbar/navbar";
+import Home from "./components/home/home";
+import Login from "./components/login/login";
+import Signup from "./components/signup/signup";
+import Dashboard from "./components/dashboard/dashboard";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+type AppTypes = {
+    getProfile: Function;
+};
 
-export default App;
+const App = (props: AppTypes) => {
+    useEffect(() => {
+        props.getProfile();
+        // eslint-disable-next-line
+    }, []);
+
+    return (
+        <BrowserRouter>
+            <div>
+                <Navbar />
+                <Switch>
+                    <Route exact path="/" component={Home} />
+                    <Route path="/login" component={Login} />
+                    <Route path="/signup" component={Signup} />
+                    <PrivateRoute path="/dashboard" component={Dashboard} />
+                    <Route render={() => <Redirect to={{ pathname: "/" }} />} />
+                </Switch>
+            </div>
+        </BrowserRouter>
+    );
+};
+
+export default connect(null, { getProfile })(App);
