@@ -45,7 +45,7 @@ const Signup: React.FunctionComponent<SignupTypes> = (props: SignupTypes) => {
                     name="username"
                     type="text"
                     value={username}
-                    onChange={(e) => setUsername(e.target.value)}
+                    onChange={(e) => setUsername(e.target.value.trim())}
                     className="signup-input"
                 />
                 <label className="signup-label" htmlFor="password">
@@ -56,7 +56,7 @@ const Signup: React.FunctionComponent<SignupTypes> = (props: SignupTypes) => {
                     name="password"
                     type="password"
                     value={password}
-                    onChange={(e) => setPassword(e.target.value)}
+                    onChange={(e) => setPassword(e.target.value.trim())}
                     className="signup-input"
                 />
                 <button className="signup-button" type="submit">
