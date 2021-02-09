@@ -1,10 +1,10 @@
 {
-    "short_name": "PETR todo",
-    "name": "PETR todo",
+    "short_name": "Notesz",
+    "name": "Notesz",
     "icons": [
         {
             "src": "/logo.png",
-            "sizes": "1024x1024",
+            "sizes": "512x512",
             "type": "image/png",
             "purpose": "any maskable"
         }

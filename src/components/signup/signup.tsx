@@ -59,7 +59,7 @@ const Signup: React.FunctionComponent<SignupTypes> = (props: SignupTypes) => {
                     onChange={(e) => setPassword(e.target.value.trim())}
                     className="signup-input"
                 />
-                <button className="signup-button" type="submit">
+                <button className="signup-button" type="submit" disabled={reducer.loading}>
                     {reducer.loading ? "Loading..." : "Signup"}
                 </button>
             </form>

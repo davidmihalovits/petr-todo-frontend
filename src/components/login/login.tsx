@@ -59,7 +59,7 @@ const Login: React.FunctionComponent<LoginTypes> = (props) => {
                     onChange={(e) => setPassword(e.target.value)}
                     className="login-input"
                 />
-                <button className="login-button" type="submit">
+                <button className="login-button" type="submit" disabled={reducer.loading}>
                     {reducer.loading ? "Loading..." : "Login"}
                 </button>
             </form>

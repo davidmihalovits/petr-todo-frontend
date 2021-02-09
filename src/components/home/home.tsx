@@ -23,13 +23,11 @@ const Home = () => {
         <div className="home">
             <h1 className="home-title">Welcome</h1>
             <p className="home-description">
-                This a simple PETR-stack todo app. It took me a few days to
-                finish it.
+                This a simple PETR-stack todo app. 
             </p>
             <p className="home-description">
                 P stands for PostgreSQL, E for Express, T for TypeScript and R
-                for React. I'm quite happy with it so far. I implemented
-                server-side authentication, basic CRUD functionalities, global
+                for React. I implemented server-side authentication, basic CRUD functionalities, global
                 state management with Redux and so on.
             </p>
             <p className="home-description">

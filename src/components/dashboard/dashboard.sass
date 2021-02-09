@@ -1,21 +1,20 @@
 @import '../../App'
 
-
 .modal-open
     overflow: hidden
 
 .dashboard-container
     .dashboard
-        margin: 90px auto
+        margin: 100px auto
         padding: 0 16px
-        max-width: 1200px
+        max-width: 700px
         display: grid
         grid-template-columns: 1fr 1fr
         gap: 30px
-            
+
         .todo
-            box-shadow: 1px 1px 6px 0 #c5c5c5
-            padding: 8px
+            padding: 12px
+            border-radius: 5px
             cursor: pointer
             overflow-x: hidden
 
@@ -27,7 +26,7 @@
                 white-space: nowrap
 
             .todo-description
-                margin-top: 10px
+                margin-top: 12px
                 text-overflow: ellipsis
                 overflow: hidden
                 white-space: nowrap
@@ -35,14 +34,14 @@
             .created-at
                 font-size: 13px
                 font-style: italic
-                margin-top: 10px
+                margin-top: 12px
                 font-weight: 300
 
     .dashboard-add-button
         width: 100%
         position: fixed
         bottom: 0
-        padding: 12px 0
+        padding: 18px 0
         background-color: $primary-color
         font-size: 22px
         color: white
@@ -51,7 +50,7 @@
         cursor: pointer
         transition: 0.3s
 
-        &:hover 
+        &:hover
             background-color: $hover-color
 
 .dashboard-modal
@@ -63,9 +62,10 @@
     bottom: 1%
     top: 1%
     max-width: 280px
-    max-height: 320px
+    max-height: 420px
     margin: auto
     border: none
+    border-radius: 5px
     box-shadow: 1px 1px 6px 0 #c5c5c5
     overflow: auto
     padding: 20px
@@ -76,14 +76,15 @@
     .modal-label
         font-weight: bold
         font-size: 18px
-        margin-top: 10px
+        margin-top: 24px
         display: block
 
     .modal-input
         width: 100%
         border: 1px solid black
-        padding: 10px
+        padding: 14px
         outline: none
+        border-radius: 5px
 
         &:focus
             color: $primary-color
@@ -92,10 +93,11 @@
     .modal-textarea
         width: 100%
         border: 1px solid black
-        padding: 10px
+        padding: 14px
         outline: none
         resize: none
-        height: 90px
+        height: 120px
+        border-radius: 5px
 
         &:focus
             color: $primary-color
@@ -103,10 +105,10 @@
 
     .modal-update-button
         width: 100%
-        margin-top: 10px
+        margin-top: 24px
         font-size: 20px
         background-color: $primary-color
-        border-radius: 0px
+        border-radius: 5px
         border: none
         outline: none
         cursor: pointer
@@ -121,52 +123,57 @@
         display: grid
         grid-template-columns: 25px 25px 25px 25px 25px 25px
         justify-content: space-between
-        margin-top: 15px
+        margin-top: 24px
 
         .color-green
             width: 25px
             height: 25px
-            background-color: #81C784
+            background-color: #C5E1A5
             cursor: pointer
+            border-radius: 5px
 
         .color-yellow
-            background-color: #FFF176
+            background-color: #FFF59D
             width: 25px
             height: 25px
             cursor: pointer
+            border-radius: 5px
 
         .color-blue
-            background-color: #4FC3F7
+            background-color: #81D4FA
             width: 25px
             height: 25px
             cursor: pointer
+            border-radius: 5px
 
         .color-purple
-            background-color: #BA68C8
+            background-color: #CE93D8
             width: 25px
             height: 25px
             cursor: pointer
+            border-radius: 5px
 
         .color-red
-            background-color: #EF5350
+            background-color: #EF9A9A
             width: 25px
             height: 25px
             cursor: pointer
+            border-radius: 5px
 
         .color-white
-            background-color: white
-            border: 1px solid black
+            background-color: #F5F5F5
             width: 25px
             height: 25px
             cursor: pointer
+            border-radius: 5px
 
     .trash
         position: absolute
         top: 0
         right: 0
-        width: 18px
-        height: 18px
-        margin: 10px 10px 0 0
+        width: 14px
+        height: 14px
+        margin: 12px 12px 0 0
         opacity: 0.5
         cursor: pointer
 
@@ -179,9 +186,10 @@
     bottom: 1%
     top: 1%
     max-width: 280px
-    max-height: 320px
+    max-height: 420px
     margin: auto
     border: none
+    border-radius: 5px
     box-shadow: 1px 1px 6px 0 #c5c5c5
     overflow: auto
     padding: 20px
@@ -192,14 +200,15 @@
     .add-modal-label
         font-weight: bold
         font-size: 18px
-        margin-top: 10px
+        margin-top: 24px
         display: block
 
     .add-modal-input
         width: 100%
         border: 1px solid black
-        padding: 10px
+        padding: 14px
         outline: none
+        border-radius: 5px
 
         &:focus
             color: $primary-color
@@ -208,10 +217,11 @@
     .add-modal-textarea
         width: 100%
         border: 1px solid black
-        padding: 10px
+        padding: 14px
         outline: none
         resize: none
-        height: 130px
+        height: 160px
+        border-radius: 5px
 
         &:focus
             color: $primary-color
@@ -219,10 +229,10 @@
 
     .add-modal-update-button
         width: 100%
-        margin-top: 10px
+        margin-top: 24px
         font-size: 20px
         background-color: $primary-color
-        border-radius: 0px
+        border-radius: 5px
         border: none
         outline: none
         cursor: pointer
@@ -238,5 +248,4 @@
         .dashboard
             display: grid
             grid-template-columns: 1fr 1fr 1fr
-            gap: 30px
-
+            gap: 50px

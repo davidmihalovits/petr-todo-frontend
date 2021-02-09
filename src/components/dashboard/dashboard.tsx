@@ -166,27 +166,27 @@ const Dashboard: React.FunctionComponent<DashboardProps> = (props) => {
             <div className="colors">
                 <div
                     className="color-green"
-                    onClick={() => updateTodoColor("#81C784")}
+                    onClick={() => updateTodoColor("#C5E1A5")}
                 />
                 <div
                     className="color-yellow"
-                    onClick={() => updateTodoColor("#FFF176")}
+                    onClick={() => updateTodoColor("#FFF59D")}
                 />
                 <div
                     className="color-blue"
-                    onClick={() => updateTodoColor("#4FC3F7")}
+                    onClick={() => updateTodoColor("#81D4FA")}
                 />
                 <div
                     className="color-purple"
-                    onClick={() => updateTodoColor("#BA68C8")}
+                    onClick={() => updateTodoColor("#CE93D8")}
                 />
                 <div
                     className="color-red"
-                    onClick={() => updateTodoColor("#EF5350")}
+                    onClick={() => updateTodoColor("#EF9A9A")}
                 />
                 <div
                     className="color-white"
-                    onClick={() => updateTodoColor("#FFFFFF")}
+                    onClick={() => updateTodoColor("#F5F5F5")}
                 />
             </div>
             <img
@@ -259,7 +259,7 @@ const Dashboard: React.FunctionComponent<DashboardProps> = (props) => {
                 className="dashboard-add-button"
                 onClick={() => openAddNewTodoModal()}
             >
-                Add Todo
+                Add Note
             </button>
         </div>
     );
